@@ -20,7 +20,14 @@ export const TitleScreen: FC<TitleScreenProps> = ({ startRef, isPhone }) => {
   // const theme = useTheme()
 
   return (
-    <BoxFade height="84vh" marginY="8vh" paddingX="10vw" down cascade>
+    <BoxFade
+      marginY="8vh"
+      paddingX="10vw"
+      down
+      cascade
+      display="flex"
+      justifyContent="center"
+    >
       <div>
         <Box display="flex" justifyContent="center">
           <img
