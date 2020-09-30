@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import { BasicPageContainer } from '../Common/BasicPageContainer'
 import { Typography } from '@material-ui/core'
-import { useHistory } from 'react-router-dom'
 
 export const Events: FC = () => {
   // const [month, setMonth] = useState(0)
@@ -26,9 +25,6 @@ export const Events: FC = () => {
   // })
 
   // marks.push({ value: 12, label: 'September' })
-
-  const History = useHistory()
-  console.log('History', History)
 
   return (
     <BasicPageContainer title="Events.">

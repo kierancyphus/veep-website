@@ -6,7 +6,6 @@ import {
   CardHeader,
   Button,
   Box,
-  IconButton,
   Paper,
   Avatar,
   Divider,
@@ -15,6 +14,7 @@ import { ChevronDown, ChevronUp } from 'react-feather'
 import { WithKey } from 'types/projects'
 import { techLogoMap, techToWebsiteMap } from 'assets/techLogos'
 import { Tech } from 'types/projects'
+import useTheme from '@material-ui/core/styles/useTheme'
 
 /**
  * We could assign a publicId to each of the projects in the database,
@@ -43,7 +43,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   aboutOrg,
 }) => {
   const [expanded, setExpanded] = useState<boolean>(false)
-
+  const theme = useTheme()
   return (
     <Card elevation={5}>
       <Box margin={1}>
@@ -65,7 +65,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         <Box px={2}>
           <Box display="flex" justifyContent="space-around" mb={1}>
             {techStack.map(tech => (
-              <Button fullWidth>
+              <Button fullWidth key={`${orgName}-${projectTitle}-${tech}`}>
                 <a href={techToWebsiteMap[tech]} target="__blank">
                   <Avatar
                     alt={tech}
@@ -104,20 +104,28 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             </Paper>
           </BoxFade>
         )}
-        {expanded ? (
-          <Box display="flex" justifyContent="flex-start">
-            <IconButton onClick={() => setExpanded(false)}>
-              <ChevronUp />
-            </IconButton>
-          </Box>
-        ) : (
-          <Box display="flex" justifyContent="flex-start">
-            <IconButton onClick={() => setExpanded(true)}>
-              <ChevronDown />
-            </IconButton>
-          </Box>
-        )}
       </Box>
+      {expanded ? (
+        <Box
+          display="flex"
+          justifyContent="flex-start"
+          style={{ backgroundColor: theme.palette.grey.A100 }}
+        >
+          <Button onClick={() => setExpanded(false)} fullWidth>
+            <ChevronUp />
+          </Button>
+        </Box>
+      ) : (
+        <Box
+          display="flex"
+          justifyContent="flex-start"
+          style={{ backgroundColor: theme.palette.grey.A100 }}
+        >
+          <Button onClick={() => setExpanded(true)} fullWidth>
+            <ChevronDown />
+          </Button>
+        </Box>
+      )}
     </Card>
   )
 }

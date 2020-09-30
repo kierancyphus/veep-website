@@ -9,6 +9,7 @@ import NODE from './node.jpg'
 import POSTGRES from './postgres.jpg'
 import PYTHON from './python.jpg'
 import REACT from './react.jpg'
+import REACTNATIVE from './reactnative.png'
 import SQL from './sql.png'
 import TS from './ts.png'
 import MONGODB from './mongodb.png'
@@ -30,6 +31,7 @@ export const techLogoMap: Record<Tech, string> = {
   [Tech.PYTHON]: PYTHON,
   [Tech.SQL]: SQL,
   [Tech.REACT]: REACT,
+  [Tech.REACT_NATIVE]: REACTNATIVE,
   [Tech.TYPESCRIPT]: TS,
   [Tech.MONGODB]: MONGODB,
   [Tech.REDUX]: REDUX,
@@ -49,6 +51,7 @@ export const techToWebsiteMap: Record<string, string> = {
   [Tech.PYTHON]: 'https://www.python.org/',
   [Tech.SQL]: 'https://en.wikipedia.org/wiki/SQL',
   [Tech.REACT]: 'https://reactjs.org/',
+  [Tech.REACT_NATIVE]: 'https://reactnative.dev/',
   [Tech.TYPESCRIPT]: 'https://www.typescriptlang.org/',
   [Tech.MONGODB]: 'https://www.mongodb.com/',
   [Tech.REDUX]: 'https://react-redux.js.org/',

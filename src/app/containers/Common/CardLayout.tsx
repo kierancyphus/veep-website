@@ -14,7 +14,7 @@ export const CardLayout: FC<CardLayoutProps> = ({ cards, Element }) => {
   return (
     <Grid container spacing={3}>
       {cards.map(card => (
-        <Grid item xl={4} lg={6} sm={12} key={card.key}>
+        <Grid item xl={6} lg={6} sm={12} key={card.key}>
           <Element {...card} />
         </Grid>
       ))}

@@ -34,9 +34,18 @@ export enum Tech {
   POSTGRES = 'PostgreSQL',
   PYTHON = 'Python',
   REACT = 'React',
+  REACT_NATIVE = 'React Native',
   SQL = 'SQL',
   TYPESCRIPT = 'TypeScript',
   MONGODB = 'MongoDB',
   REDUX = 'Redux',
   FLASK = 'Flask',
+}
+
+export enum Roles {
+  DESIGNER = 'Designer',
+  FRONTEND_DEV = 'Frontend Developer',
+  FULLSTACK_DEV = 'Fullstack Developer',
+  BACKEND_DEV = 'Backend Developer',
+  ANALYST = 'Analyst',
 }

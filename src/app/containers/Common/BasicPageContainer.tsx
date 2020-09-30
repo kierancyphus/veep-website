@@ -29,7 +29,7 @@ export const BasicPageContainer: FC<BasicPageContainerProps> = ({
             {title}
           </Typography>
         </BoxFade>
-        <Box paddingX={!isPhone && 2}>
+        <Box px={!isPhone ? 2 : 0}>
           <Card elevation={5}>
             <Box margin={isPhone ? 2 : 10}>{children}</Box>
           </Card>
